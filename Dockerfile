@@ -7,6 +7,7 @@ RUN apk --update add nginx nginx-mod-stream
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 RUN mkdir /run/nginx
+RUN chown -R nobody /var/lib/nginx
 
 EXPOSE 80 443
 
